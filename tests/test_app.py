@@ -1,11 +1,19 @@
 from blog_app import app
+import pytest
 
-def test_app_running():
-    with app.test_client() as client:
+@pytest.fixture
+def setup_app():
+    app.config['TESTING'] = True
+    app.config['WTF_CSRF_ENABLED'] = False
+    app.config["SECRET_KEY"] = "test"
+    return app
+
+def test_app_running(setup_app):
+    with setup_app.test_client() as client:
         response = client.get("/")
         assert response.status_code == 200
 
-def test_app_visible():
-    with app.test_client() as client:
+def test_app_visible(setup_app):
+    with setup_app.test_client() as client:
         response = client.get("/")
         assert b'Hello, World' in response.data

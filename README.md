@@ -4,6 +4,8 @@ The purpose of this repository is to create flask based blogging site.
 This blog will be aimed at talking about the British Basketball League
 and how the season is progressing from multiple users. 
 
+[![Tests](https://github.com/PhilipDW183/flask_blog/actions/workflows/app_test.yml/badge.svg)](https://github.com/PhilipDW183/flask_blog/actions/workflows/app_test.yml)
+
 ## Initial setup
 
 To setup the application to run on a new machine:
@@ -15,3 +17,9 @@ instructions to create a secret key for the application
 application.
 4. Navigate to `localhost:5000` and you should be able
 to see the live application.
+
+## Flask testing strategy
+
+### test_app
+
+Test that the app is able to load up correctly
