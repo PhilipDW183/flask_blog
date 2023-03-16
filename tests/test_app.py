@@ -1,5 +1,4 @@
 from blog_app import app
-from flask.testing import FlaskClient
 
 def test_app_running():
     with app.test_client() as client:

@@ -1,0 +1,5 @@
+[flake8]
+exclude = env/*
+ignore = E501
+select = F401, F403, F405, F821
+application-import-names = blog_app
